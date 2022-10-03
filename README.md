@@ -1,4 +1,4 @@
-# josegonz115.github.io
+# TakeFlight
 
 The main web application is the takeflight.htm.
 From there you can have access to the interactive game located in game folder.
