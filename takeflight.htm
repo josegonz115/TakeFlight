@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Take Flight - to73andBeyond</title>
+<link rel="icon" type="image/x-icon" href="./images/TeamPhoto.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color:white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+graphic {
+  float: left;
+  width: 80%;
+  background: hsl(200, 25%, 40%);
+  height: 550px; 
+}
+
+sidebar {
+  float: left;
+  width: 20%;
+  padding: 20px;
+  background-color: hsl(0, 0%, 65%);
+  height: 550px; 
+  
+}
+
+/* Style the list inside the menu */
+sidebar ul {
+  list-style-type: none;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  text-align: center;
+  color: white;
+}
+
+slides {
+  text-align: center;
+  color: white;
+}
+
+</style>
+</head>
+<body style="background:#708090";>
+
+<h1 style="text-align:center"; "font-size:60";>Take Flight - to73andBeyond - Interactive Project</h1>
+
+<script>
+function chart(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "./images/waxLakeOutlet.png.gif"
+  } else if (sw == 1) {
+    pic = "./images/waxLakeOutletData.png.gif"
+  }
+  else{
+    pic = "./images/unavailable.gif"
+  }
+  document.getElementById('myImage').src = pic;
+}
+
+</script>
+
+<section>
+  <graphic>
+    <p style ="text-align:center;">
+    <img id="myImage" src="./images/waxLakeOutlet.png.gif" alt="Image not available"> 
+    </p>
+    <!-- width="308" height="521"-->
+    <!--  width="100%" height="550px"-->
+  </graphic>
+  
+  <sidebar>
+    <h1>Select Graphic to View:</h1>
+    <ul>
+      <button type="button" onclick="chart(0)"> Map </button > <br> <br>
+	    <button type="button" onclick="chart(1)"> Data </button > <br> <br>
+      <button type="button" onclick="chart(2)"> 10 Year Expectation </button> <br> <br>
+	    <button type="button" onclick="chart(3)"> 20 Year Expectation </button> <br> <br>
+	    <button type="button" onclick="chart(4)"> 50 Year Expectation </button> <br> <br>
+	    <button type="button" onclick="chart(5)"> 100 Year Expectation </button> <br> <br>
+	    <a href="./game/takeflightgame.htm"> Interactive Game </a> <br> <br>
+    </ul>
+  </sidebar>
+</section>
+
+<footer>
+  <hr>
+  <h3 style="text-align:left";>Data Citations: </h3>
+  <p>Denbina, M.W., M. Simard, and J. Lai. 2021. Pre-Delta-X: Lidar-derived Water Level Profiles in the Wax Lake Outlet, LA, USA, 2016. ORNL DAAC, Oak Ridge, Tennessee, USA. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.3334/ORNLDAAC/1820">https://doi.org/10.3334/ORNLDAAC/1820</a></p>
+  <p>Denbina, M.W., M. Simard, E. Rodriguez, X. Wu, and C. Michailovsky. 2021. Pre-Delta-X: L3 AirSWOT-derived Water Level Profiles, Wax Lake Outlet, LA, USA, 2015. ORNL DAAC, Oak Ridge, Tennessee, USA. <a target="_blank" rel="noopener noreferrer" href="https://doi.org/10.3334/ORNLDAAC/1819">https://doi.org/10.3334/ORNLDAAC/1819</a></p>
+  <p>Google maps. (n.d.). Google Maps. <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/@29.5655621,-91.4455143,11z">https://www.google.com/maps/@29.5655621,-91.4455143,11z</a></p>
+  <br> <hr>
+</footer>
+
+<slides>
+  <iframe align="middle" src="https://onedrive.live.com/embed?cid=6E30A5210806AFAB&resid=6E30A5210806AFAB%218656&authkey=AHXh-rGd4vWvPlU&em=2" width="100%" height="800" frameborder="0" scrolling="no"></iframe>
+</slides>
+
+</body>
+</html>

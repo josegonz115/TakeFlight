@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Take Flight Game - to73andBeyond</title>
+<link rel="icon" type="image/x-icon" href="../images/TeamPhoto.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background:#708090";>
+<h1 style="text-align:center";>Take Flight - to73andBeyond - Interactive Project</h1>
+<h4 style="text-align:center";>Select the area most at risk of flooding. Red dots represent rising water levels in the area and green dots represent falling water levels.</h4>
+
+  <img id="myImage" src="../images/GameMap2After.gif" width="100%" border="1px">
+  <a href="takeflightgame.htm";> | Random Dots 1 | </a>
+  <a href="takeflightgame2.htm";> | Random Dots 2 | </a>
+  <a href="takeflightgame3.htm";> | Random Dots 3 | </a>
+  <a href="takeflightgame4.htm";> | Random Dots 4 | </a>
+  <a href="takeflightgame5.htm";> | Random Dots 5 | </a>
+  <a href="../takeflight.htm";> | Go Back To Main Page | </a>
+  <h2 id="score" style="text-align:center";>Score: 0</h2>
+  <p id="test"></p>
+  <script>
+    let elem = document.getElementById('test');
+    let el = document.getElementById('score');
+    document.addEventListener('click', function(event) {
+      elem.innerHTML = "pageX " + event.pageX + ' : ' + " pageY " + event.pageY + " | distance from goal: " + distance(event.pageY, event.pageX);
+	el.innerHTML = "Score: " + Math.abs(1000-distance(event.clientY, event.clientX)).toFixed(0) + "/1000";
+    });
+    function distance(Y, X) {
+      return Math.sqrt(Math.pow((Y-457),2)+Math.pow((X-711),2));
+    }
+  </script>
+</body>
+</html>
